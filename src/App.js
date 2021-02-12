@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Login from "./Login";
+import { getTokenFromUrl } from "./spotify";
+import SpotifyWebApi from "spotify-web-api-js";
+
+const spotify = new SpotifyWebApi();
 
 function App() {
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const hash = getTokenFromUrl();
+    window.location.hash = "";
+    const _token = hash.access_token;
+    if (_token) {
+      setToken(_token);
+
+      // Connect Spotify to react
+      spotify.setAccessToken(_token);
+      spotify.getMe().then((user) => {
+        console.log("person", user);
+      });
+    }
+    console.log("Token", token);
+  }, []);
+
   return (
     <div className="App">
-      <h1>Here</h1>
-      {/* Spotify Login */}
-      {/* Login with Button */}
-      <Login />
+      {token ? <h1> I am logged in</h1> : <Login />}
+      {/* Spotify Logo*/}
     </div>
   );
 }
