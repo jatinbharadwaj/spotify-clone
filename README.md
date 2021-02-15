@@ -4,7 +4,7 @@
 
 ## DEPLOYED
 
-![Click Here ✌️](spotify-cl-one.web.app)
+[Click Here ✌️](spotify-cl-one.web.app)
 
 ## FUNCTIONS
 
