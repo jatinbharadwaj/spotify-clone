@@ -6,7 +6,7 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import SidebarOption from "./SidebarOption";
 
 import { isCompositeComponent } from "react-dom/test-utils";
-import { useDataLayerValue } from "./DataLayer";
+import { useDataLayerValue } from "../DataLayer";
 function Sidebar() {
   const [{ playlists }, dispatch] = useDataLayerValue();
   return (
