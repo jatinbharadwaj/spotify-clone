@@ -12,6 +12,7 @@ import {
 import "./Login.css";
 import { loginUrl } from "./spotify";
 import { QuickCanvas, QuickStartCanvas } from "react-pts-canvas";
+import { AnimationExample } from "./AnimationExample";
 
 function Login() {
   return (

@@ -3,7 +3,7 @@
   place-items: center;
   height: 100vh;
   background-image: url("https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg");
-  background-color: black;
+  background-color: #123;
 }
 
 .login > img {
@@ -21,4 +21,10 @@
   -moz-border-radius: 99px;
   -ms-border-radius: 99px;
   -o-border-radius: 99px;
+}
+
+.pts_anim {
+  height: 100%;
+  width: 100%;
+  z-index: 200;
 }
